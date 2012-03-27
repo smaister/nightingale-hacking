@@ -30,6 +30,8 @@ case $OSTYPE in
 		arch=$(uname -m)
 		depdirn="linux-$arch"
 		patch=1
+	    export CXXFLAGS="-fpermissive"
+
 		cd dependencies
 		rm -rf "$depdirn" &> /dev/null
 		
